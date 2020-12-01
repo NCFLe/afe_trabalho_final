@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { ApplicationRoutes } from "./movies/ApplicationRoutes";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import ErrorBoundary from "./ErrorBoundary";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundary>
+
+      <div className="App">
+        <h1>Movie Max</h1>
+        <Router>
+          <div>
+            <Link to="/">Início </Link>
+          </div>
+          {/* <Link to="/Movies">Filmes </Link> */}
+          <ApplicationRoutes />
+        </Router>
+      </div>
+    </ErrorBoundary>
   );
 }
 
