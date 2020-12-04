@@ -24,7 +24,6 @@ export const MovieCard = ( {movie} ) => {
                         <span className="f5 mv0">{movie.release_date}</span>
                     </div>
                     <Link to={{pathname: "/MovieDetail", aboutProps: {id: movie.id}}} > + </Link>
-                    {/* <button onClick={handleDetails}>+</button> */}
                 </div>
             </div>
         </div>

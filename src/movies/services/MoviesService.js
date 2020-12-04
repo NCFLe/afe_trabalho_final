@@ -18,6 +18,6 @@ export class MoviesService {
   }
 
   static getMovieById(movieId) {
-    return axios(MoviesService._withBaseUrl(`movie${movieId}`));
+    return axios(MoviesService._withBaseUrl(`movie/${movieId}`));
   }
 }

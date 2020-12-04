@@ -27,7 +27,7 @@ export const MovieDetail = ( id ) => {
     return (
       <>
         <div>
-            <h1>Diz que foi, por favor {id.location.aboutProps.id}</h1>
+            <h1>Foi {id.location.aboutProps.id}</h1>
         </div>
       </>
     );
