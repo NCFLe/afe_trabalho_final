@@ -4,6 +4,7 @@ import { Movies } from "./views/Movies";
 import { MovieDetail } from "./views/MovieDetail";
 import { TopRated } from "./views/TopRated";
 import { Home } from "../Home";
+import { Series } from "../series/Views/Series";
 
 const Routes = [
   {
@@ -22,6 +23,11 @@ const Routes = [
     path: "/MovieDetail",
     component: MovieDetail, 
   },
+  // Séries
+  {
+    path: "/Series",
+    component: Series,
+  }
 ];
 
 export const ApplicationRoutes = () => (
