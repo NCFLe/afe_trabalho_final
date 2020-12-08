@@ -1,21 +1,17 @@
 import React from "react";
 import './App.css';
 import { ApplicationRoutes } from "./movies/ApplicationRoutes";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary";
+import  NavBar from "./NavBar";
 
 function App() {
 
   return (
     <ErrorBoundary>
-
       <div className="App">
-        <h1>Movie Max</h1>
         <Router>
-          <div>
-            <Link to="/">Início </Link>
-          </div>
-          {/* <Link to="/Movies">Filmes </Link> */}
+            <NavBar />
           <ApplicationRoutes />
         </Router>
       </div>
