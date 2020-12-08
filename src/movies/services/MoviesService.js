@@ -17,6 +17,14 @@ export class MoviesService {
     return axios(MoviesService._withBaseUrl("movie/top_rated"));
   }
 
+  static getUpcomingMovies() {
+    return axios(MoviesService._withBaseUrl("movie/upcoming"));
+  }
+
+  static getNowPlayingMovies() {
+    return axios(MoviesService._withBaseUrl("movie/now_playing"));
+  }
+
   static getMovieById(movieId) {
     return axios(MoviesService._withBaseUrl(`movie/${movieId}`));
   }

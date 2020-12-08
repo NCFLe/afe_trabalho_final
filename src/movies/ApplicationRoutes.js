@@ -1,33 +1,16 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Movies } from "./views/Movies";
-import { MovieDetail } from "./views/MovieDetail";
-import { TopRated } from "./views/TopRated";
 import { Home } from "../Home";
-import { Series } from "../series/Views/Series";
+import { SeriesRoutes } from "../series/SeriesRoutes";
+import { MoviesRoutes } from "./MoviesRoutes";
 
 const Routes = [
   {
     path: "/",
     component: Home,
   },
-  {
-    path: "/Movies",
-    component: Movies,
-  },
-  {
-    path: "/TopRated",
-    component: TopRated, 
-  },
-  {
-    path: "/MovieDetail",
-    component: MovieDetail, 
-  },
-  // Séries
-  {
-    path: "/Series",
-    component: Series,
-  }
+  ...MoviesRoutes,
+  ...SeriesRoutes
 ];
 
 export const ApplicationRoutes = () => (
