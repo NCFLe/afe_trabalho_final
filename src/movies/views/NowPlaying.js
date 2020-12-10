@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MoviesService } from "../services/MoviesService";
-import { MoviesList } from "../components/MoviesList"
+import { MoviesList } from "../../components/MoviesList"
 
 export const NowPlaying = () => {
     const [movies, setMovies] = useState([]);

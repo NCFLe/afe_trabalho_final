@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import StarIcon from '@material-ui/icons/Star';
 
 export const MovieDetail = ( id ) => {
-    // const [movie, setMovie] = useState([]);
-    const [movieId, setMovieId] = useState(id.location.aboutProps.id);
+    const [movieId] = useState(id.location.aboutProps.id);
     const [page, setPage] = useState(<></>)
       
     useEffect(() => {

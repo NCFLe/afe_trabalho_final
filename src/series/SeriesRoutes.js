@@ -1,4 +1,5 @@
 import { Series } from "../series/Views/Series";
+import { TopRated } from "./Views/TopRated";
 
 export const SeriesRoutes = [
     {
@@ -7,10 +8,22 @@ export const SeriesRoutes = [
     },
     {
         path: "Series/TopRated",
-        // component: TopRated, 
+        component: TopRated, 
     },
     {
         path: "SerieDetail/{id}",
-        // component: MovieDetail, 
+        // component: , 
+    },
+    {
+        path: "Series/Latest",
+        // component: , 
+    },
+    {
+        path: "Series/NowPlaying",
+        // component: , 
+    },
+    {
+        path: "Series/Popular",
+        // component: , 
     },
 ];

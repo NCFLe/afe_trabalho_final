@@ -10,9 +10,9 @@ export default function ButtonAppBar() {
 
   return (
     <div className="flex-grow-1">
-      <AppBar position="static" >
+      <AppBar position="static" className="">
         <Toolbar>
-          <Link to="/"><HomeIcon className="white" /> </Link>
+          <Link to="/"><HomeIcon className="home-icon" /> </Link>
           <Typography variant="h6" className="flex-grow-1">
             Whatever
           </Typography>

@@ -36,10 +36,7 @@ export const MovieCard = ( {movie} ) => {
                                 <span className="f4-ns"> {movie.vote_count}</span>
                             </div>
                         </Tooltip>
-
                     </div>
-                    {/* <span className="dtc tr mr0 f5 mv0">{movie.vote_count}</span> */}
-                    
                     <Link to={{pathname: "/MovieDetail", aboutProps: {id: movie.id}}}
                         className="f6 link dim ph3 pv2 mb2 dib white bg-near-black fl w-100 mt2">Saiba Mais
                     </Link>

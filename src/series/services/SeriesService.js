@@ -1,15 +1,25 @@
 import axios from "axios";
+import { BaseService } from "../../shared/service/BaseService";
 
 export class SeriesService {
-    static API_KEY = "d416af5d4faee64e25ab001d87aab5c3";
-  
-    static _withBaseUrl(path) {
-      return `https://api.themoviedb.org/3/${path}?api_key=${
-        MoviesService.API_KEY
-      }`;
+
+    static getTopRatedSeries() {
+      return axios(BaseService._withBaseUrl("tv/top_rated"));
     }
   
+    static getLatestSeries() {
+      return axios(BaseService._withBaseUrl("tv/latest"));
+    }
+  
+    static getNowPlayingSeries() {
+      return axios(BaseService._withBaseUrl("tv/on_the_air"));
+    }
+
     static getPopularSeries() {
-    //   return axios(MoviesService._withBaseUrl("movie/popular"));
+      return axios(BaseService._withBaseUrl("tv/popular"));
+    }
+
+    static getMovieById(tvId) {
+      return axios(BaseService._withBaseUrl(`tv/${tvId}`));
     }
 }

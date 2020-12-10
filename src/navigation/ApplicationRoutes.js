@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { Home } from "../Home";
 import { SeriesRoutes } from "../series/SeriesRoutes";
-import { MoviesRoutes } from "./MoviesRoutes";
+import { MoviesRoutes } from "../movies/MoviesRoutes";
 
 const Routes = [
   {

@@ -2,3 +2,8 @@
   text-align: center;
   color: #131515;
 }
+
+.MuiAppBar-colorPrimary {
+  color: #FFFAFB !important;
+  background-color: #339989 !important;
+}

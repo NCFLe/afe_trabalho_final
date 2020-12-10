@@ -1,6 +1,6 @@
 
-import { Link } from "react-router-dom"
-import { LinkCard } from "../components/LinkCard";
+import { LinkCard } from "../../components/LinkCard";
+import ImagePopular from "../../assets/images/movie_popular.jpg"
 
 export const Movies = () => {
     
@@ -10,12 +10,12 @@ export const Movies = () => {
         <div className="flex flex-column">
             <h1>Filmes</h1>
             <div className="flex justify-center">
-                <LinkCard imageSource="" title="Mais Votados" url="/Movies/TopRated"></LinkCard>
-                <LinkCard imageSource="" title="Próximas Estréias" url="/Movies/Upcoming"></LinkCard>
+                <LinkCard imageSource={ImagePopular} title="Mais Votados" url="/Movies/TopRated"></LinkCard>
+                <LinkCard imageSource={ImagePopular} title="Próximas Estréias" url="/Movies/Upcoming"></LinkCard>
             </div>
             <div className="flex justify-center">
-                <LinkCard imageSource="" title="Em Cartaz" url="/Movies/NowPlaying"></LinkCard>
-                <LinkCard imageSource="" title="Populares" url="/Movies/Popular"></LinkCard>
+                <LinkCard imageSource={ImagePopular} title="Em Cartaz" url="/Movies/NowPlaying"></LinkCard>
+                <LinkCard imageSource={ImagePopular} title="Populares" url="/Movies/Popular"></LinkCard>
             </div>
                 {/* <Link to="/Movies/TopRated">Mais Votados </Link>
                 <Link to="/Movies/Upcoming">Próximas Estréias </Link>

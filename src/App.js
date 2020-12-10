@@ -1,8 +1,8 @@
 import React from "react";
 import './App.css';
-import { ApplicationRoutes } from "./movies/ApplicationRoutes";
+import { ApplicationRoutes } from "./navigation/ApplicationRoutes";
 import { BrowserRouter as Router } from "react-router-dom";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "./shared/error/ErrorBoundary";
 import  NavBar from "./NavBar";
 
 function App() {
