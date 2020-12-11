@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import MoviePoster from "./assets/images/movie_poster.jpg"
-import SeriePoster from "./assets/images/serie_poster.jpg"
+import MoviePoster from "../../assets/images/movie_poster.jpg"
+import SeriePoster from "../../assets/images/serie_poster.jpg"
 
 export const Home = () => {
 

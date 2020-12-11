@@ -1,5 +1,5 @@
-import { Series } from "../series/Views/Series";
-import { TopRated } from "./Views/TopRated";
+import { Series } from "./views/Series";
+import { TopRated } from "./views/TopRated";
 
 export const SeriesRoutes = [
     {
