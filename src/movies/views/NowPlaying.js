@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MoviesService } from "../services/MoviesService";
-import { MoviesList } from "../../components/MoviesList"
+import { CardList } from "../../common/components/CardList"
 
 export const NowPlaying = () => {
     const [movies, setMovies] = useState([]);
@@ -20,7 +20,7 @@ export const NowPlaying = () => {
       return(
         <>
             <h3>Em cartaz</h3>
-            <MoviesList movies={movies} />
+            <CardList data={movies} />
         </>
     );
 }

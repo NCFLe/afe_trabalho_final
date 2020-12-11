@@ -1,5 +1,5 @@
 
-import { LinkCard } from "../../components/LinkCard";
+import { ClickableCard } from "../../common/components/ClickableCard";
 import ImagePopular from "../../assets/images/movie_popular.jpg"
 
 export const Movies = () => {
@@ -10,12 +10,12 @@ export const Movies = () => {
         <div className="flex flex-column">
             <h1>Filmes</h1>
             <div className="flex justify-center">
-                <LinkCard imageSource={ImagePopular} title="Mais Votados" url="/Movies/TopRated"></LinkCard>
-                <LinkCard imageSource={ImagePopular} title="Próximas Estréias" url="/Movies/Upcoming"></LinkCard>
+                <ClickableCard imageSource={ImagePopular} title="Mais Votados" url="/Movies/TopRated"></ClickableCard>
+                <ClickableCard imageSource={ImagePopular} title="Próximas Estréias" url="/Movies/Upcoming"></ClickableCard>
             </div>
             <div className="flex justify-center">
-                <LinkCard imageSource={ImagePopular} title="Em Cartaz" url="/Movies/NowPlaying"></LinkCard>
-                <LinkCard imageSource={ImagePopular} title="Populares" url="/Movies/Popular"></LinkCard>
+                <ClickableCard imageSource={ImagePopular} title="Em Cartaz" url="/Movies/NowPlaying"></ClickableCard>
+                <ClickableCard imageSource={ImagePopular} title="Populares" url="/Movies/Popular"></ClickableCard>
             </div>
                 {/* <Link to="/Movies/TopRated">Mais Votados </Link>
                 <Link to="/Movies/Upcoming">Próximas Estréias </Link>

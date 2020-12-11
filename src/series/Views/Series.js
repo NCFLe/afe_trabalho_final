@@ -1,4 +1,4 @@
-import { LinkCard } from "../../components/LinkCard";
+import { ClickableCard } from "../../common/components/ClickableCard";
 
 export const Series = () => {
     
@@ -8,12 +8,12 @@ export const Series = () => {
         <div className="flex flex-column">
             <h1>Séries</h1>
             <div className="flex justify-center">
-                <LinkCard title="Mais Votados" url="/Series/TopRated"></LinkCard>
-                <LinkCard title="Últimas Estréias" url="/Series/Latest"></LinkCard>
+                <ClickableCard title="Mais Votados" url="/Series/TopRated"></ClickableCard>
+                <ClickableCard title="Últimas Estréias" url="/Series/Latest"></ClickableCard>
             </div>
             <div className="flex justify-center">
-                <LinkCard title="Em Cartaz" url="/Series/NowPlaying"></LinkCard>
-                <LinkCard title="Populares" url="/Series/Popular"></LinkCard>
+                <ClickableCard title="Em Cartaz" url="/Series/NowPlaying"></ClickableCard>
+                <ClickableCard title="Populares" url="/Series/Popular"></ClickableCard>
             </div>
         </div>
         </>

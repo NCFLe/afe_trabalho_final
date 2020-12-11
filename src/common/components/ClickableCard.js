@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 
-export const LinkCard = ( {imageSource, title, url} ) => {
+export const ClickableCard = ( {imageSource, title, url} ) => {
     return (
         <Link to={ url } className="near-black dim fl w-third h4 ma2 bg-near-black br3 dt">
                 <span className="f2 fw6 white-60 dtc v-mid">{ title }</span>

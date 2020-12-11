@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MoviesList } from "../../components/MoviesList";
+import { CardList } from "../../common/components/CardList";
 import { SeriesService } from "../services/SeriesService";
 
 export const TopRated = () => {
@@ -14,14 +14,13 @@ export const TopRated = () => {
     };
 
       useEffect(() => {
-          debugger
         getSeries();
       }, []);
 
       return(
         <>
             <h3>Mais Votados</h3>
-            <MoviesList movies={series} />
+            <CardList data={series} />
         </>
     );
 }
