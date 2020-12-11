@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CardList } from "../../common/components/CardList";
+import { CardList } from "../../../common/components/CardList";
 import { SeriesService } from "../services/SeriesService";
 
 export const TopRated = () => {

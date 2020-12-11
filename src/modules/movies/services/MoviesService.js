@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BaseService } from "../../common/service/BaseService";
+import { BaseService } from "../../../common/service/BaseService";
 
 export class MoviesService {
 

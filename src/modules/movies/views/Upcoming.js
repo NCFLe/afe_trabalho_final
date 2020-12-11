@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { MoviesService } from "../services/MoviesService";
-import { CardList } from "../../common/components/CardList"
+import { CardList } from "../../../common/components/CardList"
 
-export const TopRated = () => {
+export const Upcoming = () => {
     const [movies, setMovies] = useState([]);
 
     const getMovies = async () => {
         const {
           data: { results }
-        } = await MoviesService.getTopRatedMovies();
+        } = await MoviesService.getUpcomingMovies();
     
         setMovies(results);
       };
@@ -19,7 +19,7 @@ export const TopRated = () => {
 
       return(
         <>
-            <h3>Mais Votados</h3>
+            <h3>Próximas Estréias</h3>
             <CardList data={movies} />
         </>
     );

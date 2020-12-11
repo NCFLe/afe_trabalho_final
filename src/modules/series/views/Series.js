@@ -1,4 +1,4 @@
-import { ClickableCard } from "../../common/components/ClickableCard";
+import { ClickableCard } from "../../../common/components/ClickableCard";
 
 export const Series = () => {
     
