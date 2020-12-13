@@ -19,8 +19,8 @@ export const Upcoming = () => {
 
       return(
         <>
-            <h3>Próximas Estréias</h3>
-            <CardList data={movies} />
+            <h1>Próximas Estréias</h1>
+            <CardList data={movies} type="Movie" />
         </>
     );
 }

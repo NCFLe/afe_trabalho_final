@@ -8,7 +8,7 @@ export class SeriesService {
     }
   
     static getLatestSeries() {
-      return axios(BaseService._withBaseUrl("tv/latest"));
+      return axios(BaseService._withBaseUrl("tv/airing_today"));
     }
   
     static getNowPlayingSeries() {
@@ -19,7 +19,12 @@ export class SeriesService {
       return axios(BaseService._withBaseUrl("tv/popular"));
     }
 
-    static getMovieById(tvId) {
+    static getSerieById(tvId) {
       return axios(BaseService._withBaseUrl(`tv/${tvId}`));
+    }
+
+    //todo
+    static getSeriesRecomendations(tvId) {
+      return axios(BaseService._withBaseUrl(`tv/${tvId}/recommendations`))
     }
 }

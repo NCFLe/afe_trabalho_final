@@ -10,7 +10,7 @@ const Routes = [
     component: Home,
   },
   ...MoviesRoutes,
-  ...SeriesRoutes
+  ...SeriesRoutes,
 ];
 
 export const ApplicationRoutes = () => (

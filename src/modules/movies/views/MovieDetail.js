@@ -25,28 +25,27 @@ export const MovieDetail = ( id ) => {
     const renderPage = (movie) => {
       setPage (
         <>
-          {/* <div className="fl w-80 pa2 bg-light-green h3 ml6 mr6">
-              <span>{movie.title}</span>
-          </div> */}
           <div className="fl w-80 pa2 ml6 mr6 tl">
             <div className="fl w-third pa2">
               <img src={`http://image.tmdb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`} className="db w-100 br2 br--top" alt="Cartaz" />
             </div>
-
             <div className="fl w-two-thirds pa2 dib v-mid">
               <span className="fl w-100 pt2 h3 fw4 f2-ns mt2 mb2">{movie.title}</span>
-
               <div className="fl w-100 f4 lh-copy mb3 flex flex-wrap">
                 <div className="flex flex-wrap items-center w-25">
-                    <StarIcon className="mr1 gold" />
-                    <span className=" f4-ns "> {movie.vote_average}</span>
+                  <StarIcon className="mr1 gold" />
+                  <span className=" f4-ns "> {movie.vote_average}</span>
                 </div>
                 <span className="w-25">{movie.vote_count} votos</span>
                 <span className="w-25">{getFormattedDate(movie.release_date)}</span>
               </div>
-
               <span className="fl w-100 pa2 mb2">Nome Original: {movie.original_title}</span>
-              
+              <span className="fl w-100 pa2 mb2 i">{movie.tagline}</span>
+              <span className="fl w-100 pa2 mb2">
+              {movie.genres.map((p) => (
+                  <span key={p.id}>{p.name + ' • '}</span>
+                ))}
+              </span>
               <span className="fl w-100 pa2 mb2">
                 {movie.production_companies.map((p) => (
                   <span key={p.id} className="mr3">

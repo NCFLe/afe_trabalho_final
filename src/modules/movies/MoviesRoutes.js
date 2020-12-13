@@ -6,28 +6,28 @@ import { NowPlaying } from "./views/NowPlaying";
 import { Popular } from "./views/Popular";
 
 export const MoviesRoutes = [
-    {
-        path: "/Movies",
-        component: Movies,
-      },
-      {
-        path: "/Movies/TopRated",
-        component: TopRated, 
-      },
-      {
-        path: "/MovieDetail",
-        component: MovieDetail, 
-      },
-      {
-        path: "/Movies/Upcoming",
-        component: Upcoming, 
-      },
-      {
-        path: "/Movies/NowPlaying",
-        component: NowPlaying, 
-      },
-      {
-        path: "/Movies/Popular",
-        component: Popular, 
-      },
+  {
+    path: "/Movies",
+    component: Movies,
+  },
+  {
+    path: "/Movies/TopRated",
+    component: TopRated, 
+  },
+  {
+    path: "/MovieDetail",
+    component: MovieDetail, 
+  },
+  {
+    path: "/Movies/Upcoming",
+    component: Upcoming, 
+  },
+  {
+    path: "/Movies/NowPlaying",
+    component: NowPlaying, 
+  },
+  {
+    path: "/Movies/Popular",
+    component: Popular, 
+  },
 ];

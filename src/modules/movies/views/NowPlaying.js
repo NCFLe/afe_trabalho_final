@@ -19,8 +19,8 @@ export const NowPlaying = () => {
 
       return(
         <>
-            <h3>Em cartaz</h3>
-            <CardList data={movies} />
+            <h1>Em cartaz</h1>
+            <CardList data={movies} type="Movie" />
         </>
     );
 }

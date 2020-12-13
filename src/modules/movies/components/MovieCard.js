@@ -5,7 +5,7 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 import StarIcon from '@material-ui/icons/Star';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 
-export const InformationCard = ( { data } ) => {
+export const MovieCard = ( { data } ) => {
 
     return(
         <div key={data.id} className="fl fl w-25 h-50 b--gray">

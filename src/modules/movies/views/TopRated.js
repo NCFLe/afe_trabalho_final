@@ -19,8 +19,8 @@ export const TopRated = () => {
 
       return(
         <>
-            <h3>Mais Votados</h3>
-            <CardList data={movies} />
+            <h1>Mais Votados</h1>
+            <CardList data={movies} type="Movie" />
         </>
     );
 }

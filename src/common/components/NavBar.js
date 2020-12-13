@@ -12,10 +12,12 @@ export default function ButtonAppBar() {
     <div className="flex-grow-1">
       <AppBar position="static" className="">
         <Toolbar>
-          <Link to="/"><HomeIcon className="home-icon" /> </Link>
-          <Typography variant="h6" className="flex-grow-1">
-            Whatever
+          <Typography variant="h6" className="flex-grow-1 tl">
+            <Link to="/" className="color-nav-bar b no-underline">Whatever</Link>
           </Typography>
+          <Link to="/" className="color-nav-bar b no-underline">Início</Link>
+          <Link to="/Movies" className="ml3 color-nav-bar b no-underline"><div>Filmes</div></Link>
+          <Link to="/Series" className="ml3 color-nav-bar b no-underline">Séries</Link>
         </Toolbar>
       </AppBar>
     </div>
