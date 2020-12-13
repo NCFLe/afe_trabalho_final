@@ -17,10 +17,6 @@ export const Movies = () => {
                 <ClickableCard imageSource={ImagePopular} title="Em Cartaz" url="/Movies/NowPlaying"></ClickableCard>
                 <ClickableCard imageSource={ImagePopular} title="Populares" url="/Movies/Popular"></ClickableCard>
             </div>
-                {/* <Link to="/Movies/TopRated">Mais Votados </Link>
-                <Link to="/Movies/Upcoming">Próximas Estréias </Link>
-                <Link to="/Movies/NowPlaying">Em Cartaz </Link>
-                <Link to="/Movies/Popular">Populares </Link> */}
         </div>
         </>
     );

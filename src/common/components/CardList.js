@@ -7,7 +7,7 @@ export const CardList = ({ data, type }) => {
     <>
       <ul>
         {data.map((d) => {
-          if(type=="Movie") {
+          if(type==="Movie") {
             return <MovieCard key={d.id} data={d} />
           }
           else {

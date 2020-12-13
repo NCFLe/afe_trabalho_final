@@ -4,13 +4,17 @@ import T from 'tachyons'
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import StarIcon from '@material-ui/icons/Star';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import ImageUnvaliable from '../../../assets/images/image_unavailable.jpg'
 
 export const SerieCard = ( { data } ) => {
 
     return(
         <div key={data.id} className="fl fl w-25 h-50 b--gray">
             <div className="pa3 ph4-ns pb4-ns ">
-                <img src={`http://image.tmdb.org/t/p/w300_and_h450_bestv2${data.poster_path}`} className="db w-100 br2 br--top" alt="Cartaz" />
+                {data.poster_path != null ?
+                    <img src={`http://image.tmdb.org/t/p/w300_and_h450_bestv2${data.poster_path}`} className="db w-100 br2 br--top" alt="Cartaz" />
+                :
+                    <img src={ImageUnvaliable} className="db w-100 br2 br--top" alt="Indisponível" />}
                 <div>
                     <div className="">
                         <Tooltip title={data.name}>

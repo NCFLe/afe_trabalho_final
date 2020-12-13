@@ -3,20 +3,20 @@ import { BaseService } from "../../../common/service/BaseService";
 
 export class MoviesService {
 
-  static getTopRatedMovies() {
-    return axios(BaseService._withBaseUrl("movie/top_rated"));
+  static getTopRatedMovies(page) {
+    return axios(BaseService._withBaseUrl("movie/top_rated", page));
   }
 
-  static getUpcomingMovies() {
-    return axios(BaseService._withBaseUrl("movie/upcoming"));
+  static getUpcomingMovies(page) {
+    return axios(BaseService._withBaseUrl("movie/upcoming", page));
   }
 
-  static getNowPlayingMovies() {
-    return axios(BaseService._withBaseUrl("movie/now_playing"));
+  static getNowPlayingMovies(page) {
+    return axios(BaseService._withBaseUrl("movie/now_playing", page));
   }
 
-  static getPopularMovies() {
-    return axios(BaseService._withBaseUrl("movie/popular"));
+  static getPopularMovies(page) {
+    return axios(BaseService._withBaseUrl("movie/popular", page));
   }
 
   static getMovieById(movieId) {

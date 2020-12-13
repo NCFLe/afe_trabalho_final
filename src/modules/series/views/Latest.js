@@ -2,26 +2,37 @@
 import React, { useEffect, useState } from "react";
 import { CardList } from "../../../common/components/CardList";
 import { SeriesService } from "../services/SeriesService";
+import Pagination from '@material-ui/lab/Pagination';
 
 export const Latest = () => {
     const [series, setSeries] = useState([]);
+    const [totalPages, setTotalPages] = useState(0);
+    const [page, setPage] = useState(1);
 
     const getSeries = async () => {
-        const {
-          data: { results }
-        } = await SeriesService.getLatestSeries();
-    
-        setSeries(results);
+      const {
+        data: { results, total_pages }
+      } = await SeriesService.getLatestSeries(page);
+  
+      setSeries(results);
+      setTotalPages(total_pages);
     };
 
-      useEffect(() => {
-        getSeries();
-      }, []);
+    useEffect(() => {
+      getSeries();
+    }, [page]);
 
-      return(
-        <>
-            <h1>Transmitindo Hoje</h1>
-            <CardList data={series} type="Serie" />
-        </>
-    );
+    const handlePaginationChange = (event, value) => {
+      setPage(value);
+    }
+
+    return(
+      <>
+        <h1>Transmitindo Hoje</h1>
+        <div className="w-100 h2">
+          <Pagination count={totalPages} shape="rounded" className="fr mr4" onChange={handlePaginationChange} page={page}/>
+        </div>
+        <CardList data={series} type="Serie" />
+      </>
+  );
 }

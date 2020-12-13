@@ -1,6 +1,7 @@
 import { SeriesService } from "../services/SeriesService";
 import React, { useEffect, useState } from "react";
 import StarIcon from '@material-ui/icons/Star';
+import ImageUnvaliable from '../../../assets/images/image_unavailable.jpg'
 
 export const SerieDetail = ( id ) => {
     const [serieId] = useState(id.location.aboutProps.id);
@@ -27,7 +28,10 @@ export const SerieDetail = ( id ) => {
         <>
           <div className="fl w-80 pa2 ml6 mr6 tl">
             <div className="fl w-third pa2">
-              <img src={`http://image.tmdb.org/t/p/w300_and_h450_bestv2${serie.poster_path}`} className="db w-100 br2 br--top" alt="Cartaz" />
+              {serie.poster_path != null ? 
+                <img src={`http://image.tmdb.org/t/p/w300_and_h450_bestv2${serie.poster_path}`} className="db w-100 br2 br--top" alt="Cartaz" />
+              :
+                <img src={ImageUnvaliable} className="db w-100 br2 br--top" alt="Indisponível" />}
             </div>
             <div className="fl w-two-thirds pa2 dib v-mid">
               <span className="fl w-100 pt2 h3 fw4 f2-ns mt2 mb2">{serie.name}</span>

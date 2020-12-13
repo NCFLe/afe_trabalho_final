@@ -3,28 +3,23 @@ import { BaseService } from "../../../common/service/BaseService";
 
 export class SeriesService {
 
-    static getTopRatedSeries() {
-      return axios(BaseService._withBaseUrl("tv/top_rated"));
+    static getTopRatedSeries(page) {
+      return axios(BaseService._withBaseUrl("tv/top_rated", page));
     }
   
-    static getLatestSeries() {
-      return axios(BaseService._withBaseUrl("tv/airing_today"));
+    static getLatestSeries(page) {
+      return axios(BaseService._withBaseUrl("tv/airing_today", page));
     }
   
-    static getNowPlayingSeries() {
-      return axios(BaseService._withBaseUrl("tv/on_the_air"));
+    static getNowPlayingSeries(page) {
+      return axios(BaseService._withBaseUrl("tv/on_the_air", page));
     }
 
-    static getPopularSeries() {
-      return axios(BaseService._withBaseUrl("tv/popular"));
+    static getPopularSeries(page) {
+      return axios(BaseService._withBaseUrl("tv/popular", page));
     }
 
     static getSerieById(tvId) {
       return axios(BaseService._withBaseUrl(`tv/${tvId}`));
-    }
-
-    //todo
-    static getSeriesRecomendations(tvId) {
-      return axios(BaseService._withBaseUrl(`tv/${tvId}/recommendations`))
     }
 }
