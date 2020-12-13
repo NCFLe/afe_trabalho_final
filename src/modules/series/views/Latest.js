@@ -9,16 +9,16 @@ export const Latest = () => {
     const [totalPages, setTotalPages] = useState(0);
     const [page, setPage] = useState(1);
 
-    const getSeries = async () => {
-      const {
-        data: { results, total_pages }
-      } = await SeriesService.getLatestSeries(page);
-  
-      setSeries(results);
-      setTotalPages(total_pages);
-    };
-
     useEffect(() => {
+      const getSeries = async () => {
+        const {
+          data: { results, total_pages }
+        } = await SeriesService.getLatestSeries(page);
+    
+        setSeries(results);
+        setTotalPages(total_pages);
+      };
+
       getSeries();
     }, [page]);
 

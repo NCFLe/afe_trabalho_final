@@ -1,6 +1,5 @@
 import { Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom'
-import T from 'tachyons'
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import StarIcon from '@material-ui/icons/Star';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
@@ -31,7 +30,9 @@ export const SerieCard = ( { data } ) => {
                         <Tooltip title="Primeiro Episódio">
                             <div className="flex items-center">
                                 <LiveTvIcon className="mr1 red" />
-                                <span className=" f4-ns "> {data.first_air_date.split("-")[0]}</span>
+                                {data.first_air_date != null ? 
+                                    <span className=" f4-ns "> {data.first_air_date.split("-")[0]}</span>
+                                :<></>}
                             </div>
                         </Tooltip>
                         <Tooltip title="Quantidade de votos">

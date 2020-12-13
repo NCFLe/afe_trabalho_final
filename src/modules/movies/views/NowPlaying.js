@@ -8,16 +8,16 @@ export const NowPlaying = () => {
     const [totalPages, setTotalPages] = useState(0);
     const [page, setPage] = useState(1);
 
-    const getMovies = async () => {
-      const {
-        data: { results, total_pages }
-      } = await MoviesService.getNowPlayingMovies(page);
-  
-      setMovies(results);
-      setTotalPages(total_pages);
-    };
-
     useEffect(() => {
+      const getMovies = async () => {
+        const {
+          data: { results, total_pages }
+        } = await MoviesService.getNowPlayingMovies(page);
+    
+        setMovies(results);
+        setTotalPages(total_pages);
+      };
+  
       getMovies();
     }, [page]);
 

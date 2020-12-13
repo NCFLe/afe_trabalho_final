@@ -7,21 +7,13 @@ export const SerieDetail = ( id ) => {
     const [serieId] = useState(id.location.aboutProps.id);
     const [page, setPage] = useState(<></>)
       
-    useEffect(() => {
-      getSerie();
-    }, [serieId]);
-
+  useEffect(() => {
     const getSerie =  () => {
       SeriesService.getSerieById(serieId).then((results) => {
         if(results && results.data)
           renderPage(results.data);
       })
     };
-
-    const getFormattedDate = (date) => {
-      let formDt = new Date(date);
-      return formDt.getDay() + "-" + formDt.getMonth() + "-" + formDt.getUTCFullYear()
-    }
 
     const renderPage = (serie) => {
       setPage (
@@ -79,6 +71,13 @@ export const SerieDetail = ( id ) => {
         </>
       );
     }
-      
-    return page;
+  
+    getSerie();
+  }, [serieId]);
+
+  const getFormattedDate = (date) => {
+    let formDt = new Date(date);
+    return formDt.getDay() + "-" + formDt.getMonth() + "-" + formDt.getUTCFullYear()
+  }
+  return page;
 }

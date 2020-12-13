@@ -1,7 +1,6 @@
 import { ClickableCard } from "../../../common/components/ClickableCard";
 
 export const Series = () => {
-    
 
     return(
         <>

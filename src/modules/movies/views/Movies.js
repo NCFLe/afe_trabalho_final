@@ -3,7 +3,6 @@ import { ClickableCard } from "../../../common/components/ClickableCard";
 import ImagePopular from "../../../assets/images/movie_popular.jpg"
 
 export const Movies = () => {
-    
 
     return(
         <>

@@ -4,25 +4,17 @@ import StarIcon from '@material-ui/icons/Star';
 import ImageUnvaliable from '../../../assets/images/image_unavailable.jpg'
 
 export const MovieDetail = ( id ) => {
-    const [movieId] = useState(id.location.aboutProps.id);
-    const [page, setPage] = useState(<></>)
+  const [movieId] = useState(id.location.aboutProps.id);
+  const [page, setPage] = useState(<></>)
       
-    useEffect(() => {
-      getMovie();
-    }, [movieId]);
-
+  useEffect(() => {
     const getMovie =  () => {
       MoviesService.getMovieById(movieId).then((results) => {
         if(results && results.data)
           renderPage(results.data);
       })
     };
-
-    const getFormattedDate = (date) => {
-      let formDt = new Date(date);
-      return formDt.getDay() + "-" + formDt.getMonth() + "-" + formDt.getUTCFullYear()
-    }
-
+    
     const renderPage = (movie) => {
       setPage (
         <>
@@ -72,6 +64,14 @@ export const MovieDetail = ( id ) => {
         </>
       );
     }
-      
-    return page;
+
+    getMovie();
+  }, [movieId]);
+
+  const getFormattedDate = (date) => {
+    let formDt = new Date(date);
+    return formDt.getDay() + "-" + formDt.getMonth() + "-" + formDt.getUTCFullYear()
+  }
+
+  return page;
 }
